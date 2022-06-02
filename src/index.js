@@ -1,12 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Menu from './components/Menu';
-import data from './data/recipes.json';
+import App from './components/app';
 
-const container = document.querySelector('.root');
+const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <Menu recipes={data} />
+    <App />
   </React.StrictMode>
 );

@@ -8,6 +8,21 @@ services:
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./build:/build
   php:
-    image: php:fpm
+    build:
+      context: .
+      dockerfile: PHP.Dockerfile
     volumes:
       - ./build:/build
+  mysql:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'rootpass'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'userpass'
+      MYSQL_DATABASE: 'DockerDB'
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - 3306:3306
+volumes:
+  mysqldata: {}

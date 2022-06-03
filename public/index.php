@@ -28,6 +28,6 @@
         echo "MySQL string: 'Welcome to MySQL " . $version . "'";
       ?>
     </div>
-    <script src="bundle.js"></script>
+    <script src="js/bundle.js"></script>
   </body>
 </html>

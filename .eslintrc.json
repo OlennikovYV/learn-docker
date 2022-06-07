@@ -18,6 +18,6 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "ignorePatterns": ["/dist/bundle.js", "/node_modules/*"]
+  "ignorePatterns": ["/build/bundle.js", "/node_modules/*"],
   "rules": {}
 }
